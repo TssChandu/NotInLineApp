@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+  font-family: 'Roboto', sans-serif !important;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header Styles */
+
+.nav-header {
+  position: fixed;
+  background-color: #fff;
+  padding: 15px 60px;
+  width: 100%;
+  z-index: 10;
+}
+
+.hamburger {
+  display: none;
+}
+
+.nav-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0px 30px;
+}
+
+.nav-list li {
+  margin: 10px;
+  font-weight: 500;
+  color: #000;
+}
+
+@media screen and (max-width: 600px) {
+  .nav-header {
+    padding: 15px 25px;
+    justify-content: space-between !important;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .active-list {
+    color: #fff !important;
+  }
+
+  .nav-list {
+    display: flex;
+    flex-direction: column !important;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 0;
+    left: -150%;
+    transition: 0.3s;
+    z-index: -3;
+  }
+
+  .active {
+    left: -35px;
+  }
+}
+
+.active {
+  color: rgb(19, 142, 209) !important;
+}
+
+.header-logo {
+  width: 250px;
+  height: 45px;
+}
+
+@media screen and (max-width: 600px) {
+  .header-logo {
+    width: 120px;
+    height: 30px;
+  }
+
+  .mob-top-container,
+  .mob-bot-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
+
+/* Other Routes */
+
+.bg-container {
+  min-height: 100vh;
+  padding: 85px 60px 0px;
+}
+
+.home-img {
+  width: 400px;
+  order: 1;
+  margin-left: 30px;
+}
+
+
+.left-card {
+  background-image: linear-gradient(to right, rgb(153, 219, 255), #e7f7ff, #fff);
+  width: 100%;
+}
+
+.fill-card {
+  background-color: #ffffff;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  min-width: 400px;
+  padding: 35px;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.form-title {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.form-img {
+  width: 25px;
+}
+
+.input {
+  margin-left: 15px;
+  border: none;
+  outline: none;
+  width: 250px;
+  max-width: 350px;
+  background-color: #e3e3e3;
+  border-radius: 3px;
+  padding: 5px 10px;
+}
+
+.form-btn {
+  padding: 5px 10px;
+  border: none;
+  background-color: rgb(19, 142, 209);
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.link {
+  list-style-type: none;
+  text-decoration: none;
+  color: #000;
+}
+
+.anime {
+  animation: moving 3s ease-out infinite both;
+}
+
+@keyframes moving {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .anime {
+    order: 0;
+    max-width: 80vw;
+  }
+
+  .fill-card {
+    min-width: 0px;
+    max-width: 80vw;
+    padding: 15px;
+  }
+
+  .left-card {
+    width: 100vw;
+    padding: 25px;
+  }
+
+  .home-img {
+    max-width: 80vw;
+  }
+}
+
+.search-bg-container {
+  max-height: 100vh;
+}
+
+.search-container {
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  width: 350px;
+  padding: 20px;
+  background-color: #e3e3e3;
+  border-radius: 15px;
+  height: max-content;
+}
+
+.search-input {
+  width: 80%;
+  height: 40px;
+  padding: 5px 10px;
+  border: 1px solid gray;
+  outline: none;
+}
+
+.search-btn {
+  width: max-content;
+  height: 40px;
+  padding: 5px 10px;
+  border: none;
+}
+
+.results-container {
+  overflow: scroll;
+  height: 100%;
+}
+
+.result-card {
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  background-color: #e7f7ff;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 15px;
+}
+
+@media screen and (max-width: 600px) {
+  .bg-container {
+    padding: 85px 20px;
+  }
+
+  .search-bg-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .search-container {
+    width: 80vw;
+    margin: 20px 0px;
+  }
+
+  .mob-input {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .input {
+    width: 100%;
+    margin-left: 0px;
+  }
+
+  .form-img {
+    margin-bottom: 10px;
+  }
+
+  .results-container {
+    max-width: 80vw;
+    padding: 0;
+  }
+
+  .result-card {
+    width: 100%;
+  }
+}
